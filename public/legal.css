@@ -1,0 +1,57 @@
+/* Legal pages — matches LOTUS site brand (Playfair + DM Sans, lotus palette) */
+:root{
+  --primary:#E8879B; --dark:#1A3D22; --accent:#F0C840; --green:#3A7D44;
+  --bg:#FDF8F5; --light:#F5EDE8; --text:#2C2420; --muted:#6B5E58; --white:#FFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  color:var(--text); background:var(--bg); line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+header{
+  background:var(--dark); color:#FFF; padding:22px 28px;
+  box-shadow:0 2px 12px rgba(26,61,34,.08);
+}
+header .inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+}
+header h1{
+  font-family:'Playfair Display',serif;font-size:22px;font-weight:700;
+  letter-spacing:.3px;color:var(--accent);
+}
+header nav a{
+  color:rgba(255,255,255,.85); text-decoration:none;
+  margin-left:26px; font-size:14px; font-weight:500;
+  transition:color .25s ease;
+}
+header nav a:hover{color:var(--accent)}
+main{max-width:780px;margin:0 auto;padding:56px 28px 96px}
+.legal h2{
+  font-family:'Playfair Display',serif;
+  font-size:2.5rem; color:var(--dark); margin-bottom:8px; font-weight:700;
+}
+.legal .updated{color:var(--muted);font-size:13px;margin-bottom:40px}
+.legal h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem; color:var(--green); margin:36px 0 10px; font-weight:600;
+}
+.legal p,.legal li{font-size:1.02rem;color:var(--text);margin-bottom:12px}
+.legal ul{padding-left:26px;margin-bottom:14px}
+.legal a{color:var(--green);font-weight:500}
+.legal a:hover{color:var(--dark)}
+.legal strong{color:var(--dark)}
+footer{
+  text-align:center; padding:36px 28px; color:var(--muted); font-size:13px;
+  background:var(--light); border-top:1px solid rgba(26,61,34,.08);
+}
+footer a{color:var(--muted);margin:0 12px;text-decoration:none}
+footer a:hover{color:var(--dark)}
+@media (max-width:600px){
+  .legal h2{font-size:2rem}
+  header nav a{margin-left:14px;font-size:13px}
+  header h1{font-size:18px}
+  main{padding:36px 20px 60px}
+}

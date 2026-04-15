@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+.text-reveal-wrapper { overflow: hidden; }
+.text-reveal-wrapper .word { display: inline-block; transform: translateY(115%); }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #FFFFFF;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.05;
+}
+
+/* Neon gold CTA */
+.btn-gold {
+  background-color: #F0C840;
+  color: #1a1a1a;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.btn-gold:hover {
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 0 8px 24px rgba(240, 200, 64, 0.4);
+}
+
+/* White outline btn (for dark bgs) */
+.btn-outline {
+  background: transparent;
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* Pink outline btn (for white bgs) */
+.btn-pink-outline {
+  background: transparent;
+  color: #FF2D78;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 14px;
+  border: 2px solid #FF2D78;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.btn-pink-outline:hover {
+  background: #FF2D78;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 45, 120, 0.3);
+}
+
+.img-treated { filter: brightness(1.02) saturate(1.05); }
+
+.card-shadow {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-shadow:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Nav link with pink underline */
+.nav-link {
+  position: relative;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #FF2D78;
+  transition: width 0.3s ease;
+}
+.nav-link:hover { color: #FF2D78; }
+.nav-link:hover::after { width: 100%; }
+
+/* Dark bg nav link */
+.nav-link-light {
+  position: relative;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-link-light::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #F0C840;
+  transition: width 0.3s ease;
+}
+.nav-link-light:hover { color: white; }
+.nav-link-light:hover::after { width: 100%; }
+
+.lotus-glow { filter: drop-shadow(0 0 40px rgba(255, 45, 120, 0.15)); }
+
+.pink-top-border { border-top: 3px solid #FF2D78; }
